@@ -1,0 +1,20 @@
+<?php
+return array (
+  'America/Asuncion' => 'Asunción',
+  'America/Curacao' => 'Curaçao',
+  'Antarctica/DumontDUrville' => 'Dumont d’Urville',
+  'Asia/Saigon' => 'Ho Chi Minh City',
+  'Europe/Kiev' => 'Kiev',
+  'Asia/Qostanay' => 'Kostanay',
+  'Indian/Reunion' => 'Réunion',
+  'America/St_Barthelemy' => 'St Barthélemy',
+  'Atlantic/St_Helena' => 'St Helena',
+  'America/St_Johns' => 'St John’s',
+  'America/St_Kitts' => 'St Kitts',
+  'America/St_Lucia' => 'St Lucia',
+  'America/St_Thomas' => 'St Thomas',
+  'America/St_Vincent' => 'St Vincent',
+  'Africa/Sao_Tome' => 'São Tomé',
+  'Etc/Unknown' => 'Unknown City',
+  'Europe/Uzhgorod' => 'Uzhhorod',
+);

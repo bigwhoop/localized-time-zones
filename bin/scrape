@@ -1,0 +1,41 @@
+#!/usr/bin/env php
+<?php
+set_time_limit(0);
+
+$baseUrl = 'http://unicode.org/repos/cldr/trunk/common/main';
+$index = file_get_contents($baseUrl);
+
+preg_match_all('|"(.+?\.xml)"|', $index, $matches);
+
+$cache = [];
+
+foreach ($matches[1] as $file) {
+    $locale = pathinfo($file, PATHINFO_FILENAME);
+    
+    $data = file_get_contents($baseUrl . '/' . $file);
+    $xml = new \SimpleXMLElement($data);
+    
+    if (!isset($xml->dates->timeZoneNames->zone)) {
+        printf("Skipped %s\n", $locale);
+        continue;
+    }
+    
+    $tzs = [];
+    foreach ($xml->dates->timeZoneNames->zone as $zone) {
+        if (isset($zone->exemplarCity)) {
+            $tzs[(string) $zone['type']] = (string) $zone->exemplarCity;
+        }
+    }
+    
+    if (false !== strpos($locale, '_')) {
+        $base = explode('_', $locale)[0];
+        $tzs = array_merge($cache[$base], $tzs);
+    }
+    
+    asort($tzs);
+    
+    $cache[$locale] = $tzs;
+    
+    file_put_contents(__DIR__ . '/../data/' . $locale . '.php', "<?php\nreturn " . var_export($tzs, true) . ';');
+    printf("Processed %s\n", $locale);
+}

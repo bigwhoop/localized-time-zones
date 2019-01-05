@@ -1,0 +1,23 @@
+<?php
+return array (
+  'Atlantic/Azores' => 'Azoren',
+  'America/North_Dakota/Center' => 'Center, Noord-Dakota',
+  'Antarctica/DumontDUrville' => 'Dumont d’Urville',
+  'Asia/Yakutsk' => 'Jakutsk',
+  'Asia/Yekaterinburg' => 'Jekaterinborg',
+  'Asia/Kamchatka' => 'Kamschatka',
+  'Atlantic/Canary' => 'Kanaren',
+  'Asia/Krasnoyarsk' => 'Krasnojarsk',
+  'America/Mexico_City' => 'Mexiko-Stadt',
+  'Europe/Moscow' => 'Moskau',
+  'America/North_Dakota/New_Salem' => 'New Salem, Noord-Dakota',
+  'Etc/Unknown' => 'Nich begäng',
+  'Asia/Novosibirsk' => 'Nowosibirsk',
+  'Asia/Sakhalin' => 'Sachalin',
+  'Europe/Zaporozhye' => 'Saporoschje',
+  'Asia/Ulaanbaatar' => 'Ulanbator',
+  'Europe/Uzhgorod' => 'Uschgorod',
+  'Asia/Vladivostok' => 'Wladiwostok',
+  'Europe/Volgograd' => 'Wolgograd',
+  'Antarctica/Vostok' => 'Wostok',
+);

@@ -1,0 +1,23 @@
+{
+  "name": "bigwhoop/localized-time-zones",
+  "description": "Provides access to translated/localized time zone names (timezones)",
+  "type": "library",
+  "require": {
+    "php": "^7.1"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^7.5"
+  },
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Philippe Gerber",
+      "email": "philippe@bigwhoop.ch"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Bigwhoop\\LocalizedTimeZones\\": "src/"
+    }
+  }
+}
